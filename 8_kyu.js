@@ -159,13 +159,30 @@ h = 0
 m = 1
 s = 1
 result = 61000 */
-function past(h, m, s){
-  const milliseconds = (h * 3600 + m * 60 + s) * 1000;
-  return milliseconds;
-}
-let h = 0;
-let m = 1;
-let s = 1;
+// function past(h, m, s){
+//   const milliseconds = (h * 3600 + m * 60 + s) * 1000;
+//   return milliseconds;
+// }
+// let h = 0;
+// let m = 1;
+// let s = 1;
 
-let result = past(h, m, s);
-console.log(result); // Output: 61000
+// let result = past(h, m, s);
+// console.log(result); // Output: 61000
+
+// Ikkilikdan o'nlikga o'tkazish:
+// function binaryToDecimal(binary) {
+//   let decimal = parseInt(binary, 2);
+//   return decimal;
+// }
+// const binaryNumber = "101";
+// const decimalNumber = binaryToDecimal(binaryNumber);
+// console.log(decimalNumber);  // Chiqish: 5
+// O'nlikdan ikkilikga o'tkazish:
+function decimalToBinary(decimal) {
+  let binary = decimal.toString(2);
+  return binary;
+}
+const decimalNumber = 42;
+const binaryNumber = decimalToBinary(decimalNumber);
+console.log(binaryNumber);  // Chiqish: 101010
